@@ -1,0 +1,122 @@
+include mixins
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./css/app.css")
+        link(rel="stylesheet",
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css",
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==",
+            crossorigin="anonymous" referrerpolicy="no-referrer")
+        title Document
+    body 
+        include ./partials/header
+        main.main
+            section.main__banner
+                div.main__banner__content
+                    h1 IT Solution & Business Services Company
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, magna aliqua. ipsum is simply dummy text of the printing.
+                    nav.banner__link 
+                        a.banner__link__item1(href="") Our Service
+                        a.banner__link__item2(href="") Contact Us
+                div.main__banner__image
+                    img(src="./img/home-font.png" alt="image banner")
+                div.main__banner--footer
+                    img(src="./img/home-bottom-shape.png" alt="image home-bottom-shape")
+            section.main__solution
+                .main__solution__title 
+                    h6 WHAT WE PROVIDE 
+                    h2 IT Solutions 
+                .main__solution__list 
+                    +solutionItem("main__solution__item","fa-sharp fa-solid fa-menorah","IT Solution")
+                    +solutionItem("main__solution__item","fa-sharp fa-solid fa-snowflake","Web Development")
+                    +solutionItem("main__solution__item","fa-sharp fa-solid fa-sliders","Networking Services")
+                    +solutionItem("main__solution__item","fa-sharp fa-solid fa-star-of-david","SEO Optimization")
+                    +solutionItem("main__solution__item","fa-sharp fa-solid fa-shekel-sign","App Optimization")
+                    +solutionItem("main__solution__item","fa-sharp fa-solid fa-sun-plant-wilt","Data Recovery")
+            section.main__service 
+                article.main__service__content
+                    h6 ABOUT OUR COMPANY 
+                    h2 Providing your business with a quality IT service is our passion.
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, nostrud
+                    .main__service__skill
+                        +skillItem("IT Consulting","90%")
+                        +skillItem("Virtual Workstation","75%")
+                        +skillItem("Managed IT Service","80%")
+                    a.main__service__link(href="") Learn More
+                aside.main__service__image
+                    img(src="./img/about.jpg")
+                    .years--design 
+                        h2 27
+                        h5 Years Experience
+            section.main__overview 
+                article.main__overview--choose
+                    .overview__image 
+                        img(src="./img/choose-1.jpg",alt="overview")
+                    .overview__content 
+                        h6 WHY CHOOSE US?
+                        h2 Safeguard your brand with Cyber-Security & IT Solutions
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        ul.overview__feature__list 
+                            +featureItem("Remote It Assistance","#")
+                            +featureItem("Solving IT Problems","#")
+                            +featureItem("Practice IT Management","#")
+                            +featureItem("IT Security Services","#")
+                            +featureItem("Managed IT Service","#")
+                            +featureItem("Cloud Services","#")
+                article.main__overview--trust
+                    .overview__content 
+                        h6 WHY TRUST US?
+                        h2 Achieve digital transformation for your retail business services
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        ul.overview__feature__list 
+                            +featureItem("Protect your Business")
+                            +featureItem("Network Security")
+                            +featureItem("Data Security")
+                            +featureItem("Small Business Owners")
+                            +featureItem("Running your Business")
+                            +featureItem("Network Monitoring")
+                    .overview__image 
+                        img(src="./img/choose-2.jpg",alt="overview")
+            section.main__counter 
+                ul.main__counter__list
+                    li.main__counter__item 
+                        h2 27+
+                        h3 Years Helping Business
+                    li.main__counter__item 
+                        h2 500+
+                        h3 Employees
+                    li.main__counter__item 
+                        h2 300M
+                        h3 Complete Projecta
+                    li.main__counter__item 
+                        h2 90K+
+                        h3 5 Star Rating
+            section.main__testimonial
+                h6 TESTIMONIAL 
+                h2 What Our Client Say 
+                article.main__testimonial__list 
+                    +testimonialItem("Saabir al-Obeid","./img/testimonial-2.jpg")
+                    +testimonialItem("Zahra Burrnett","./img/testimonial-1.jpg")
+                    +testimonialItem("Stevie Wills","./img/testimonial-3.jpg")
+                    +testimonialItem("Saabir al-Obeid","./img/testimonial-2.jpg")
+                    +testimonialItem("Zahra Burrnett","./img/testimonial-1.jpg")
+                    +testimonialItem("Stevie Wills","./img/testimonial-3.jpg")
+            section.main__team 
+                h6 TEAM MEMBER 
+                h2 Expert Team 
+                ul.main__team__list 
+                    +teamMember("./img/team-1.jpg","Ava Farrington","Founder, ceo")
+                    +teamMember("./img/team-2.jpg","Kevin Haley","Co-founder, cto")
+                    +teamMember("./img/team-3.jpg","Alishia Fulton","Chief creative officer")
+                    +teamMember("./img/team-4.jpg","Lucas Martinez","Project Manager")
+            section.main__blog 
+                h6 BLOG & ARTICLE 
+                h2 Recent Blog 
+                article.main__blog__list 
+                    +blogItem("./img/blog-1.jpg","Author","17 June 2021","Planning for a Safe Return to the Workplace IT Solutions")
+                    +blogItem("./img/blog-2.jpg","Author","20 June 2021","Announcing Our New Smiles for Success Charity")
+                    +blogItem("./img/blog-3.jpg","Author","25 June 2021","Machine Learning Applications for Every Industry")
+        include ./partials/footer 

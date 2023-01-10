@@ -1,0 +1,60 @@
+mixin solutionItem(classname,icon,name)
+    article(class= classname)
+        i(class = icon)
+        h3= name 
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua
+        a(href="") Read More
+
+mixin skillItem(name,value)
+    .main__service__skill__item
+        h6= name 
+            em= value
+        .skillItem__progress(style= "width:" +value)
+
+mixin featureItem(name)
+    li.overview__feature__item= name
+
+mixin testimonialItem(name,avatar)
+    article.main__testimonial__item
+        ul.testimonial__item__rate
+            li
+                <i class="fas fa-star"></i>
+            li
+                <i class="fas fa-star"></i>
+            li
+                <i class="fas fa-star"></i>
+            li
+                <i class="fas fa-star"></i>
+            li
+                <i class="fas fa-star"></i>
+        p.testimonial__item__content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation.
+        img.testimonial__item__avartar(src= avatar)
+        h3= name 
+        span Business Man
+
+mixin teamMember(image,name,job)
+    li.main__team__member
+        .img
+            img(src= image, alt="avatar")
+        h3= name 
+        span= job
+        ul.main__team__member__info 
+            li.member__info__link <i class="fab fa-facebook"></i>
+            li.member__info__link <i class="fab fa-twitter"></i>
+            li.member__info__link <i class="fab fa-instagram"></i>
+
+mixin blogItem(image,author,date,title)
+    article.main__blog__item
+        .main__blog__item__img
+            img(src= image, alt="anh Blog")
+        .main__blog__item__content
+            ul.blog__item__link
+                li.blog__item__link__author
+                    <i class="fas fa-user"></i>
+                    a(href="")= author 
+                li.blog__item__link__date
+                    <i class="fas fa-calendar-day"></i>
+                    a(href="")= date
+            h3= title 
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt
+            a.blog__item__more(href="") Read More 
