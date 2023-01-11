@@ -1,3 +1,5 @@
+- var listPage = ["About Us","Team","Pricing","404 Error","FAQ","Coming Soon","Term & Conditions","Privacy Policy",]
+- var listBlog = ["Blog Grid","Blog Right Sidebar","Blog Details"]
 header.header
     div.header__logo
         img.header__logo__image(src="./img/logo-black.png", alt="Logo image")
@@ -32,33 +34,18 @@ header.header
             li.header__item
                 a.header__link(href="") Pages
                     <i class="fa-sharp fa-solid fa-angle-down header__icon"></i>
-                ul.list__page.header__item__list   
-                    li.item__page
-                        a.item__page__link(href="") About Us
-                    li.item__page
-                        a.item__page__link(href="") Team
-                    li.item__page
-                        a.item__page__link(href="") Pricing
-                    li.item__page
-                        a.item__page__link(href="") 404 Error
-                    li.item__page
-                        a.item__page__link(href="") FAQ
-                    li.item__page
-                        a.item__page__link(href="") Coming Soon
-                    li.item__page
-                        a.item__page__link(href="") Term & Conditions
-                    li.item__page
-                        a.item__page__link(href="") Privacy Policy
+                ul.list__page.header__item__list 
+                    each item in listPage
+                        li.item__page
+                            a.item__page__link(href="")= item
             li.header__item
                 a.header__link(href="") Blog
                     <i class="fa-sharp fa-solid fa-angle-down header__icon"></i>
                 ul.list__blog.header__item__list   
-                    li.item__blog
-                        a.item__blog__link(href="") Blog Grid
-                    li.item__blog
-                        a.item__blog__link(href="") Blog Right Sidebar
-                    li.item__blog
-                        a.item__blog__link(href="") Blog Details
+                    each item in listBlog
+                        li.item__blog
+                            a.item__blog__link(href="") item
+
             li.header__item
                 a.header__link(href="") Contact
     a.header__link--support(href="") Get It Support

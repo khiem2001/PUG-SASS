@@ -1,3 +1,5 @@
+- var serviceList = ["IT Solution","Web Development","Networking Services","SEO Optimization","App Optimization"]
+- var usefulList = ["About Us","Case Study "]
 footer.footer
     .footer__about 
         h3 About Us 
@@ -14,11 +16,8 @@ footer.footer
     .footer__service
         h3 Our Services 
         ul.footer__service__list 
-            li.footer__service__item IT Solution
-            li.footer__service__item Web Development
-            li.footer__service__item Networking Services
-            li.footer__service__item SEO Optimization
-            li.footer__service__item App Optimization
+            each item in serviceList
+                li.footer__service__item= item
     
     .footer__useful 
         h3 Useful Link 
